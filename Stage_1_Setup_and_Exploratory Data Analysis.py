@@ -17,7 +17,7 @@ plt.rcParams['axes.spines.top'] = False
 plt.rcParams['axes.spines.right'] = False
 sns.set_palette('muted')
 
-print('✅ Imports successful')
+print('Imports successful')
 
 # ── CELL 2: Load All Tables ──────────────────────────────────────────────────
 
@@ -53,7 +53,7 @@ merged_check = orders.merge(customers[['customer_id','customer_unique_id']], on=
 print('customer_unique_id (true customer) unique values:', merged_check['customer_unique_id'].nunique())
 
 print()
-print('📌 These should differ — the gap shows repeat customers using different order-level IDs')
+print('These should differ — the gap shows repeat customers using different order-level IDs')
 print(f'   Repeat customer rate: {1 - merged_check["customer_unique_id"].nunique()/orders["customer_id"].nunique():.1%}')
 print("\n")
 
@@ -100,7 +100,7 @@ print(f'Dropped:              {len(orders) - len(orders_clean):,} ({(1 - len(ord
 
 # ── CELL 7: Build the Master Dataframe ───────────────────────────────────────
 # Join the tables we need for RFM analysis
-# 💡 Always join step-by-step and check row counts — silent join errors are common
+#  Always join step-by-step and check row counts — silent join errors are common
 
 # Step 1: Orders + Customer unique ID
 df = orders_clean.merge(
@@ -149,7 +149,7 @@ plt.tight_layout()
 plt.savefig('/Users/SanthoshVislavath/Desktop/Product_analytics/Olist_data_analysis/output/01_monthly_volume.png', dpi=150, bbox_inches='tight')
 plt.show()
 
-print('📌 INSIGHT: Look for the growth trend and any sudden drops — those drops are where churn analysis starts')
+print(' INSIGHT: Look for the growth trend and any sudden drops — those drops are where churn analysis starts')
 
 # ── CELL 9: Order Value Distribution ─────────────────────────────────────────
 # Business question: What's the typical order value? Are there outliers?
@@ -203,7 +203,7 @@ plt.savefig('/Users/SanthoshVislavath/Desktop/Product_analytics/Olist_data_analy
 plt.show()
 
 print()
-print('💡 PM INSIGHT: If repeat rate is <10%, the business has a retention crisis.')
+print(' PM INSIGHT: If repeat rate is <10%, the business has a retention crisis.')
 print('   This number is your NORTH STAR metric for the entire churn analysis.')
 
 
@@ -273,7 +273,7 @@ plt.savefig('/Users/SanthoshVislavath/Desktop/Product_analytics/Olist_data_analy
 plt.show()
 
 print()
-print('💡 PM INSIGHT: If late delivery → bad reviews, and bad reviews → no repeat purchase,')
+print('PM INSIGHT: If late delivery → bad reviews, and bad reviews → no repeat purchase,')
 print('   then delivery SLA is a critical lever for retention. We will test this in Stage 4.')
 
 
