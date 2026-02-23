@@ -1,0 +1,5 @@
+Hypothesis,Key Finding,Evidence_Strength,Business_Impact,Reversibility,Segment_Affected,Intervention,Priority_Score,Rank
+H1: Post-purchase experience failure,Review score predicts repeat rate (significant correlation),5,5,4,New Customers + Churned,Day-7 post-delivery NPS + resolution flow,100,1
+H3: No habit-formation loop,Median return gap is long — most repeat buyers take 60+ days,4,5,5,New Customers + Potential Loyalists,Personalised re-engagement sequence at day 30 + day 60,100,2
+H2: Product quality deterioration,Later cohorts have lower avg first review (check your slope significance),3,4,3,All cohorts acquired post-expansion,Seller quality score gating + review-triggered flags,36,3
+H4: Category / acquisition mismatch,Large repeat-rate gap between high- and low-frequency categories,4,3,3,New Customers (acquisition funnel),Promote high-repeat categories in ads + homepage,36,4
