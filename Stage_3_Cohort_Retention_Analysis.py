@@ -15,7 +15,7 @@ plt.rcParams['axes.spines.right'] = False
 import os
 os.makedirs('output', exist_ok=True)
 
-print('✅ Ready')
+print('Ready')
 
 # ── CELL 2: Load data ────────────────────────────────────────────────────────
 # master_df.csv from Stage 1 | rfm_segments.csv from Stage 2
